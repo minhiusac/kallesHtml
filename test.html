@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flickity Slider Group Cells</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #fafafa;
+        }
+
+        .carousel {
+            background: #f0f0f0;
+            padding-bottom: 20px;
+        }
+
+        .carousel-cell {
+            width: 25%;
+            /* 4 cells on desktop */
+            height: 200px;
+            margin-right: 10px;
+            background: #6c5ce7;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 1024px) {
+            .carousel-cell {
+                width: 33.3333%;
+                /* 3 cells on tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-cell {
+                width: 50%;
+                /* 2 cells on mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-cell {
+                width: 100%;
+                /* 1 cell on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Flickity Slider – Group 4 Cells</h2>
+
+    <div class="carousel">
+        <div class="carousel-cell">1</div>
+        <div class="carousel-cell">2</div>
+        <div class="carousel-cell">3</div>
+        <div class="carousel-cell">4</div>
+        <div class="carousel-cell">5</div>
+        <div class="carousel-cell">6</div>
+        <div class="carousel-cell">7</div>
+        <div class="carousel-cell">8</div>
+        <div class="carousel-cell">9</div>
+        <div class="carousel-cell">10</div>
+    </div>
+
+    <!-- Flickity JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+<script>
+    var flkty = new Flickity('.carousel', {
+      cellAlign: 'left',
+      contain: true,
+      groupCells: true,
+      pageDots: true,
+      wrapAround: true
+    });
+  </script>
+</html>
